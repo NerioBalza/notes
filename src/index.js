@@ -6,6 +6,7 @@ import { createStore, compose } from "redux";
 import reducer from "./reducers";
 //Component
 import App from "./router/App";
+import "./assets/styles/Index.scss";
 
 const initialState = {
   user: {
