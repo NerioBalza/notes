@@ -6,8 +6,8 @@ $title-font: "Ubuntu", sans-serif;
 $text-font: "Roboto", sans-serif;
 
 //Colors:
-$primary-color: #9a7d0a;
-$secundary-color: #f9e79f;
+$primary-color: #f9e79f;
+$secundary-color: #9a7d0a;
 $tertiary-color: #abb2b9;
 $dark-color: #1c2833;
 $light-color: #f7f9f9;
@@ -47,6 +47,11 @@ a {
   text-decoration: none;
 }
 
+hr {
+  border-color: $light-color;
+  border-bottom: none;
+}
+
 .btn {
   display: block;
   text-align: center;
@@ -57,6 +62,6 @@ a {
   min-width: 100px;
   max-width: 200px;
   background: transparent;
-  border: 2px solid $primary-color;
+  border: 2px solid $secundary-color;
   border-radius: 0.75rem;
 }

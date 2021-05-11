@@ -1,0 +1,42 @@
+.header {
+  height: 6.5rem;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primary-color;
+
+  &__title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .dark-mode {
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: $light-color;
+    position: relative;
+
+    &__button {
+      transition: 500ms;
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      margin: 2px;
+      border-radius: 13px;
+      left: 0;
+      background-color: $dark-color;
+    }
+  }
+}
+
+body.dark .header {
+  background-color: rgba(#000000, 0.25);
+
+  .dark-mode {
+    &__button {
+      left: 30px;
+    }
+  }
+}
