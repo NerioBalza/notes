@@ -1,0 +1,39 @@
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+
+  &__icon {
+    padding: 1.5rem;
+    font-size: 2rem;
+    display: inline-block;
+    border: 2px solid $dark-color;
+    border-radius: 50%;
+
+    &:active {
+      background-color: $dark-color;
+      color: $light-color-2;
+    }
+    &:hover {
+      background-color: $dark-color;
+      color: $light-color-2;
+    }
+  }
+}
+
+body.dark .social-media {
+  &__icon {
+    border-color: $light-color;
+
+    &:active {
+      background-color: $light-color;
+      color: $dark-color-2;
+    }
+    &:hover {
+      background-color: $light-color;
+      color: $dark-color-2;
+    }
+  }
+}

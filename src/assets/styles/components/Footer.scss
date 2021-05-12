@@ -1,6 +1,11 @@
 .footer {
-  background-color: rgba(#000000, 0.25);
+  background-color: $light-color-2;
   padding: 5rem 2.5rem;
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
+  text-align: center;
+}
+
+body.dark .footer {
+  background-color: $dark-color-2;
 }
