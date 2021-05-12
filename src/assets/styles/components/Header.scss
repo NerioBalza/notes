@@ -4,14 +4,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(#000000, 0.25);
+  background-color: $light-color-2;
+  position: relative;
 
   &__title {
     font-size: 3rem;
     line-height: 3rem;
   }
 
+  .burger-button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-size: 3rem;
+  }
+
   .dark-mode {
+    display: flex;
     width: 56px;
     height: 28px;
     border-radius: 14px;
@@ -19,6 +28,7 @@
     position: relative;
 
     &__button {
+      top: 0;
       transition: 500ms;
       position: absolute;
       width: 24px;
@@ -28,12 +38,23 @@
       left: 0;
       background-color: $dark-color;
     }
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      font-size: 1.8rem;
+      height: 28px;
+    }
   }
 }
 
 body.dark .header {
+  background-color: $dark-color-2;
   .dark-mode {
+    background-color: $dark-color;
     &__button {
+      background-color: $light-color;
       left: 28px;
     }
   }
