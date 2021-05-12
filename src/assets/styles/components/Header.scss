@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $primary-color;
+  background-color: rgba(#000000, 0.25);
 
   &__title {
     font-size: 3rem;
@@ -12,17 +12,17 @@
   }
 
   .dark-mode {
-    width: 60px;
-    height: 30px;
-    border-radius: 15px;
+    width: 56px;
+    height: 28px;
+    border-radius: 14px;
     background-color: $light-color;
     position: relative;
 
     &__button {
       transition: 500ms;
       position: absolute;
-      width: 26px;
-      height: 26px;
+      width: 24px;
+      height: 24px;
       margin: 2px;
       border-radius: 13px;
       left: 0;
@@ -32,11 +32,9 @@
 }
 
 body.dark .header {
-  background-color: rgba(#000000, 0.25);
-
   .dark-mode {
     &__button {
-      left: 30px;
+      left: 28px;
     }
   }
 }

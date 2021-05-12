@@ -15,7 +15,7 @@ const Home = () => {
           </Link>
         </div>
       </section>
-      <hr style={{ margin: " 0px 1rem" }} />
+      {/* <hr style={{ margin: " 0px 2.5rem" }} /> */}
     </div>
   );
 };

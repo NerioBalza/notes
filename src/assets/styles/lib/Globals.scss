@@ -6,9 +6,8 @@ $title-font: "Ubuntu", sans-serif;
 $text-font: "Roboto", sans-serif;
 
 //Colors:
-$primary-color: #f9e79f;
-$secundary-color: #9a7d0a;
-$tertiary-color: #abb2b9;
+$note-color: #f9e79f;
+$button-color: #9a7d0a;
 $dark-color: #1c2833;
 $light-color: #f7f9f9;
 
@@ -62,6 +61,6 @@ hr {
   min-width: 100px;
   max-width: 200px;
   background: transparent;
-  border: 2px solid $secundary-color;
+  border: 2px solid $button-color;
   border-radius: 0.75rem;
 }
