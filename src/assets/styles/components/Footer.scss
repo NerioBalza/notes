@@ -4,6 +4,17 @@
   display: grid;
   gap: 3rem;
   text-align: center;
+  font-size: 1.2rem;
+
+  &__nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    a {
+      font-weight: bold;
+    }
+  }
 }
 
 body.dark .footer {
