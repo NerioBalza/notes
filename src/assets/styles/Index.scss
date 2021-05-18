@@ -3,8 +3,12 @@
 
 //pages
 @import "./pages/Home.scss";
+@import "./pages/Login.scss";
 
 //components
 @import "./components/Header.scss";
 @import "./components/Footer.scss";
 @import "./components/SocialMedia.scss";
+@import "./components/Input.scss";
+@import "./components/LoginForm";
+@import "./components/RegisterForm";

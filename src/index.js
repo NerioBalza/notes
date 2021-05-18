@@ -10,9 +10,9 @@ import "./assets/styles/Index.scss";
 
 const initialState = {
   user: {
-    name: "",
     email: "",
   },
+  notes: [],
 };
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

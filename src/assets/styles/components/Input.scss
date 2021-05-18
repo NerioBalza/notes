@@ -1,0 +1,28 @@
+.input-container {
+  .label {
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    text-transform: capitalize;
+  }
+
+  .input {
+    background-color: $light-color-2;
+    outline: none;
+    font-size: 1.4rem;
+    width: 100%;
+    padding: 1rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 2px solid $dark-color;
+    margin-bottom: 1.25rem;
+
+    &::placeholder {
+      font-size: 1.4rem;
+      color: $dark-color;
+    }
+  }
+}
+
+body.dark .input {
+  border-color: $light-color;
+}
