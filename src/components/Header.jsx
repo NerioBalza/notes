@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const darkModeKey = "notes-dark-mode";
+
+  useEffect(() => {
+    if (localStorage.getItem(darkModeKey) === null) {
+      localStorage.setItem(darkModeKey, false);
+      setDarkMode(false);
+    } else {
+      if (localStorage.getItem(darkModeKey) === "false") setDarkMode(false);
+      else setDarkMode(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    darkMode
+      ? document.body.classList.add("dark")
+      : document.body.classList.remove("dark");
+  }, [darkMode]);
+
   const handleDarkMode = () => {
-    document.body.classList.toggle("dark");
+    localStorage.setItem(darkModeKey, !darkMode);
+    setDarkMode(!darkMode);
   };
 
   return (
