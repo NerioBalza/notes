@@ -1,0 +1,75 @@
+.notes {
+  height: auto;
+  min-height: calc(100vh - 6.5rem);
+
+  &-var {
+    height: 6.5rem;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5rem;
+    justify-content: space-between;
+    gap: 1rem;
+
+    &__searcher {
+      outline: none;
+      font-size: 1.4rem;
+      padding: 1rem 0.75rem;
+      border-radius: 0.75rem;
+      border: 2px solid $dark-color;
+      width: 100%;
+      max-width: 500px;
+
+      &::placeholder {
+        font-size: 1.4rem;
+        color: $dark-color;
+      }
+    }
+
+    &__add {
+      font-size: 1.8rem;
+      background-color: $light-color-2;
+      padding: 1.1rem;
+      border-radius: 2rem;
+    }
+  }
+  &-container {
+    display: grid;
+    padding: 2.5rem;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 475px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: 700px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &-messages {
+    text-align: center;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+
+    .message-text {
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  }
+}
+
+body.dark .notes {
+  &-var {
+    &__add {
+      background-color: $dark-color-2;
+    }
+  }
+}

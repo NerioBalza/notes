@@ -26,14 +26,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-disk:before {
+  content: "\e962";
+}
 .icon-load:before {
   content: "\e97a";
 }
-.icon-search:before {
-  content: "\e986";
+.icon-bin:before {
+  content: "\e9ac";
 }
 .icon-menu:before {
   content: "\e9bd";
+}
+.icon-earth:before {
+  content: "\e9ca";
 }
 .icon-plus:before {
   content: "\ea0a";
@@ -46,6 +52,9 @@
 }
 .icon-check:before {
   content: "\ea10";
+}
+.icon-back:before {
+  content: "\ea38";
 }
 .icon-twitter:before {
   content: "\ea96";

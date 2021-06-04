@@ -1,0 +1,23 @@
+.note-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: $note-color;
+  color: $dark-color;
+  width: 100%;
+  height: 5.6rem;
+  @media screen and (min-width: 425px) {
+    height: 80px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__content {
+    font-size: 1.2rem;
+    width: 100%;
+    overflow: hidden;
+  }
+}

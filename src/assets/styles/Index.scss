@@ -4,6 +4,9 @@
 //pages
 @import "./pages/Home.scss";
 @import "./pages/Login.scss";
+@import "./pages/Notes.scss";
+@import "./pages/NoteNew.scss";
+@import "./pages/NoteEdit.scss";
 
 //components
 @import "./components/Header.scss";
@@ -12,3 +15,4 @@
 @import "./components/Input.scss";
 @import "./components/LoginForm";
 @import "./components/RegisterForm";
+@import "./components/Note.scss";

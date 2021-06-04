@@ -1,24 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../actions";
 
 import LoginForm from "../components/LoginForm";
 import RegisterForm from "../components/RegisterForm";
 
-const Login = ({ history, user, loginUser }) => {
+const Login = ({ history, loginUser }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [userInfo, setUserInfo] = useState({});
-
-  useEffect(() => {
-    if (user.email) history.push("/notes");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   /*Login*/
   const handleLogin = (event) => {
     event.preventDefault();
     loginUser(userInfo);
-    history.push("/notes");
+    history.push("/");
   };
 
   /*Register*/
@@ -74,10 +69,4 @@ const mapDispatchToProps = {
   loginUser,
 };
 
-const mapStateToProps = (state) => {
-  return {
-    user: state.user,
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(Login);

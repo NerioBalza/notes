@@ -1,0 +1,78 @@
+.edit-note {
+  height: auto;
+  min-height: calc(100vh - 6.5rem);
+
+  &-nav {
+    padding: 2.5rem;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    max-width: 425px;
+    margin: 0 auto;
+
+    > div {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .edit-note__btn {
+      display: inline-block;
+      padding: 1.4rem;
+      border-radius: 0.5rem;
+      font-size: 1.6rem;
+      background-color: $light-color-2;
+      border: 2px solid $dark-color;
+      color: $dark-color;
+    }
+  }
+
+  &-content {
+    padding: 2.5rem;
+
+    @media screen and (min-width: 425px) {
+      padding: 5rem 2.5rem;
+    }
+
+    .note-container {
+      background-color: $note-color;
+      width: 100%;
+      max-width: 375px;
+      margin: 0 auto;
+      border-radius: 0.5rem;
+      min-height: 270px;
+      padding-bottom: 2rem;
+
+      @media screen and (min-width: 425px) {
+        min-height: 300px;
+      }
+
+      .edit-note__title {
+        width: 100%;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        height: 3.6rem;
+        font-weight: bold;
+        font-family: $title-font;
+        padding-top: 2rem;
+      }
+      .edit-note__text {
+        width: 100%;
+        font-size: 1.4rem;
+        height: 20rem;
+        font-family: $text-font;
+      }
+    }
+  }
+}
+
+body.dark .edit-note {
+  &-nav {
+    .edit-note__btn {
+      background-color: $dark-color-2;
+      border: 2px solid $light-color;
+      color: $light-color;
+    }
+  }
+}
