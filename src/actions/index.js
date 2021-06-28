@@ -3,6 +3,10 @@ export const loginUser = (payload) => ({
   payload,
 });
 
+export const logoutUser = () => ({
+  type: "LOGOUT_USER",
+});
+
 export const newNote = (payload) => ({
   type: "NEW_NOTE",
   payload,

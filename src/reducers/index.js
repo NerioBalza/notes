@@ -3,7 +3,15 @@ const reducer = (state, action) => {
     case "LOGIN_USER":
       return {
         ...state,
-        user: action.payload,
+        user: { ...action.payload, isLogin: true },
+      };
+    case "LOGOUT_USER":
+      return {
+        user: {
+          email: "",
+          isLogin: false,
+        },
+        notes: [],
       };
     case "NEW_NOTE":
       let newArray = [];

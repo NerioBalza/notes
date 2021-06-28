@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../actions";
 
+import Header from "../components/Header";
 import LoginForm from "../components/LoginForm";
 import RegisterForm from "../components/RegisterForm";
 
@@ -45,23 +46,26 @@ const Login = ({ history, loginUser }) => {
   };
 
   return (
-    <div className="login">
-      <section className="login-container">
-        {isLogin ? (
-          <LoginForm
-            handleSubmit={handleLogin}
-            handleSwitchLogin={handleSwitchLogin}
-            handleChange={handleChange}
-          />
-        ) : (
-          <RegisterForm
-            handleSubmit={handleRegister}
-            handleSwitchLogin={handleSwitchLogin}
-            handleChange={handleChange}
-          />
-        )}
-      </section>
-    </div>
+    <>
+      <Header />
+      <div className="login">
+        <section className="login-container">
+          {isLogin ? (
+            <LoginForm
+              handleSubmit={handleLogin}
+              handleSwitchLogin={handleSwitchLogin}
+              handleChange={handleChange}
+            />
+          ) : (
+            <RegisterForm
+              handleSubmit={handleRegister}
+              handleSwitchLogin={handleSwitchLogin}
+              handleChange={handleChange}
+            />
+          )}
+        </section>
+      </div>
+    </>
   );
 };
 

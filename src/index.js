@@ -11,6 +11,7 @@ import "./assets/styles/Index.scss";
 const initialState = {
   user: {
     email: "",
+    isLogin: false,
   },
   notes: [],
 };

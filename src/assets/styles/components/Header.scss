@@ -12,11 +12,65 @@
     line-height: 3rem;
   }
 
-  .burger-button {
+  .menu-btn {
     display: inline-block;
     width: 30px;
     height: 30px;
     font-size: 3rem;
+  }
+
+  .menu {
+    position: absolute;
+    background-color: $light-color-2;
+    right: 0;
+    left: 0;
+    top: -100vh;
+    padding: 2.5rem;
+    transition: 500ms;
+    height: 100vh;
+
+    &-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 2.5rem;
+
+      .close-menu-btn {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 2.5rem;
+      }
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: calc(100vh - 10.5rem);
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2.5rem 0;
+        align-items: center;
+
+        li {
+          font-size: 1.5rem;
+          font-family: $title-font;
+          font-weight: 500;
+          &:hover {
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-active {
+    top: 0;
   }
 
   .dark-mode {
@@ -51,6 +105,10 @@
 
 body.dark .header {
   background-color: $dark-color-2;
+
+  .menu {
+    background-color: $dark-color-2;
+  }
   .dark-mode {
     background-color: $dark-color;
     &__button {

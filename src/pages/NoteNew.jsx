@@ -19,6 +19,7 @@ const NotesNew = ({ newNote, history }) => {
 
   useEffect(() => {
     setNoteData({ ...noteData, note_id: uuidv4() });
+    console.log(history);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

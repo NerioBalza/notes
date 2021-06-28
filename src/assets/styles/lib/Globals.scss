@@ -34,6 +34,11 @@ body.dark {
   color: $light-color;
 }
 
+.limit-body-height {
+  height: 100vh;
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,

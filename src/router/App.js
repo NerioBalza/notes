@@ -11,7 +11,7 @@ import NoteEdit from "../pages/NoteEdit";
 import Login from "../pages/Login";
 import NotFound from "../pages/NotFound";
 
-function App({ user }) {
+function App({ user, history }) {
   const [isLoging, setIsLogin] = useState("");
   useEffect(() => {
     setIsLogin(user);
