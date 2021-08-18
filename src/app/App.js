@@ -7,7 +7,8 @@ import Home from "../pages/Home";
 import Notes from "../pages/Notes";
 import NoteNew from "../pages/NoteNew";
 import NoteEdit from "../pages/NoteEdit";
-import Login from "../pages/Login";
+import LogIn from "../pages/LogIn";
+import SignUp from "../pages/SignUp";
 import NotFound from "../pages/NotFound";
 
 function App({ isLoging }) {
@@ -30,7 +31,8 @@ function App({ isLoging }) {
       ) : (
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/login" component={LogIn} />
+          <Route exact path="/signup" component={SignUp} />
           <Route exact path="/404" component={NotFound} />
           <Redirect to="/404" />
         </Switch>

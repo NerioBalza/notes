@@ -4,8 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $light-color-2;
+  background-color: $light-mode-section;
   position: relative;
+  box-shadow: 0px 0px 10px $dark-mode-section;
 
   &-title {
     &__text {
@@ -35,7 +36,7 @@
   }
 
   .menu {
-    background: $light-color-2;
+    background: $light-mode-section;
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -100,7 +101,7 @@
         width: 56px;
         height: 28px;
         border-radius: 14px;
-        background-color: $light-color;
+        background-color: $light-mode-background;
         position: relative;
 
         &__button {
@@ -112,7 +113,7 @@
           margin: 2px;
           border-radius: 13px;
           left: 0;
-          background-color: $dark-color;
+          background-color: $dark-mode-background;
         }
         &__icon {
           display: flex;
@@ -145,16 +146,16 @@
 }
 
 body.dark .header {
-  background-color: $dark-color-2;
+  background-color: $dark-mode-section;
 
   .menu {
-    background-color: $dark-color-2;
+    background-color: $dark-mode-section;
 
     &__buttons {
       .dark-mode {
-        background-color: $dark-color;
+        background-color: $dark-mode-background;
         &__button {
-          background-color: $light-color;
+          background-color: $light-mode-background;
           left: 28px;
         }
       }

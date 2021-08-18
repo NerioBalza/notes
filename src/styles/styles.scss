@@ -3,7 +3,8 @@
 
 //pages
 @import "./pages/Home.scss";
-@import "./pages/Login.scss";
+@import "./pages/LogIn.scss";
+@import "./pages/SignUp.scss";
 @import "./pages/Notes.scss";
 @import "./pages/NoteNew.scss";
 @import "./pages/NoteEdit.scss";
@@ -11,8 +12,5 @@
 //components
 @import "./components/Header.scss";
 @import "./components/Footer.scss";
-@import "./components/SocialMedia.scss";
 @import "./components/Input.scss";
-@import "./components/LoginForm";
-@import "./components/RegisterForm";
 @import "./components/Note.scss";

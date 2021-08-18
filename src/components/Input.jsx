@@ -13,9 +13,9 @@ const Input = ({
         {!label ? id : label}
       </label>
       <input
+        required
         className="input"
         onChange={handleChange}
-        required
         id={id}
         type={type}
         placeholder={placeholder ? placeholder : `Type your ${id}`}

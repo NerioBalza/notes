@@ -1,22 +1,53 @@
 .footer {
-  background-color: $light-color-2;
+  background-color: $light-mode-section;
   padding: 5rem 2.5rem;
   display: grid;
   gap: 3rem;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  box-shadow: 0px 0px 5px $dark-mode-section;
 
-  &__nav {
+  .social-media {
     display: flex;
-    gap: 2rem;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
 
-    a {
-      font-weight: bold;
+    &__icon {
+      padding: 1.5rem;
+      font-size: 2rem;
+      display: inline-block;
+      border: 2px solid $dark-mode-background;
+      border-radius: 50%;
+
+      &:active {
+        background-color: $dark-mode-section;
+        color: $light-mode-section;
+      }
+      &:hover {
+        background-color: $dark-mode-background;
+        color: $light-mode-section;
+      }
     }
   }
 }
 
 body.dark .footer {
-  background-color: $dark-color-2;
+  background-color: $dark-mode-section;
+
+  .social-media {
+    &__icon {
+      border-color: $light-mode-background;
+
+      &:active {
+        background-color: $light-mode-background;
+        color: $dark-mode-section;
+      }
+      &:hover {
+        background-color: $light-mode-background;
+        color: $dark-mode-section;
+      }
+    }
+  }
 }

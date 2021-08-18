@@ -8,15 +8,27 @@ const Home = () => {
       <Layout onApp={false}>
         <main className="home">
           <section className="hero">
-            <div className="hero__note">
-              <h2 className="hero__title">Notes</h2>
-              <p className="hero__text">
-                Write down all the ideas and tasks you have
-              </p>
-              <Link className="btn hero__btn" to="/login">
-                Login
-              </Link>
-            </div>
+            <h2 className="hero__title">Notes</h2>
+            <p className="hero__text">
+              Write down all the ideas and <br /> tasks you have
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              ...
+            </p>
+          </section>
+          <section className="links">
+            <Link className="links__button" to="/login">
+              Log In
+            </Link>
+            <p>or</p>
+            <Link className="links__button" to="/signup">
+              Sign Up
+            </Link>
           </section>
         </main>
       </Layout>

@@ -6,12 +6,21 @@ $title-font: "Ubuntu", sans-serif;
 $text-font: "Monserrat", sans-serif;
 
 //Colors:
-$dark-color: #1c2833;
-$dark-color-2: #17202a;
-$light-color: #f7f9f9;
-$light-color-2: #ecf0f1;
-$note-color: #f9e79f;
-$button-color: #9a7d0a;
+
+// // Light Mode
+$light-mode-background: #f4f6f7;
+$light-mode-section: #ffffff;
+$light-mode-text: #17202a;
+
+// // Dark Mode
+$dark-mode-background: #1c2833;
+$dark-mode-section: #17202a;
+$dark-mode-text: #eaecee;
+
+// // Others
+$note-color: #f9e7af;
+$button-background: #2ecc71;
+$button-border: #239b56;
 
 * {
   margin: 0;
@@ -24,14 +33,15 @@ html {
 }
 
 body {
+  background: $light-mode-background;
+  color: $light-mode-text;
   font-family: $text-font;
-  color: $dark-color;
-  background-color: $light-color;
+  min-width: 320px;
 }
 
-body.dark {
-  background-color: $dark-color;
-  color: $light-color;
+.dark {
+  background: $dark-mode-background;
+  color: $dark-mode-text;
 }
 
 .limit-body-height {
@@ -54,20 +64,18 @@ a {
 }
 
 hr {
-  border-color: $light-color;
+  border-color: $light-mode-background;
   border-bottom: none;
 }
 
-.btn {
-  display: block;
-  text-align: center;
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
-  font-weight: bold;
-  width: auto;
-  min-width: 100px;
-  max-width: 200px;
-  background: transparent;
-  border: 2px solid $button-color;
-  border-radius: 0.75rem;
+button {
+  font-family: inherit;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+li {
+  list-style: none;
 }

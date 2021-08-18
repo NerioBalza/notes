@@ -22,9 +22,9 @@
       padding: 1.4rem;
       border-radius: 0.5rem;
       font-size: 1.6rem;
-      background-color: $light-color-2;
-      border: 2px solid $dark-color;
-      color: $dark-color;
+      background-color: $light-mode-section;
+      border: 2px solid $dark-mode-background;
+      color: $dark-mode-background;
     }
   }
 
@@ -70,9 +70,9 @@
 body.dark .edit-note {
   &-nav {
     .edit-note__btn {
-      background-color: $dark-color-2;
-      border: 2px solid $light-color;
-      color: $light-color;
+      background-color: $dark-mode-section;
+      border: 2px solid $light-mode-background;
+      color: $light-mode-background;
     }
   }
 }

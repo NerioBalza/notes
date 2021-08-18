@@ -1,0 +1,49 @@
+.login {
+  padding: 5rem 2.5rem;
+  height: calc(100vh - 6.5rem);
+
+  &-container {
+    background: $light-mode-section;
+    box-shadow: 0px 0px 10px $dark-mode-section;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+  }
+
+  &__form {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  &__button {
+    height: 4rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    background: $light-mode-background;
+    border-radius: 0.5rem;
+    border: 2px solid $light-mode-text;
+  }
+
+  &__signup {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: right;
+    padding: 0.5rem 1rem;
+  }
+}
+
+body.dark .login {
+  &-container {
+    background: $dark-mode-section;
+    color: $dark-mode-text;
+  }
+}

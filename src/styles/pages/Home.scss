@@ -1,35 +1,61 @@
 .home {
-  .hero {
-    padding: 5rem 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 6.5rem);
-    color: $dark-color;
+  min-height: calc(100vh - 6.5rem);
+  padding: 5rem 2.5rem;
+  display: grid;
+  gap: 10rem;
+  align-content: center;
 
-    &__note {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 1rem;
-      padding: 3rem;
-      width: 100%;
-      min-width: 270px;
-      max-width: 300px;
-      height: auto;
-      min-height: 300px;
-      background: $note-color;
-      border-radius: 5px;
-    }
+  .hero {
+    background: $note-color;
+    border-radius: 0.5rem;
+    padding: 2.5rem;
+    display: grid;
+    gap: 1rem;
+    color: $light-mode-text;
+    align-content: start;
+    width: calc(100vw - 5rem);
+    height: calc(100vw - 5rem);
+    min-width: 270px;
+    min-height: 270px;
+    max-width: 375px;
+    max-height: 375px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px $dark-mode-section;
+
     &__title {
       font-size: 3rem;
     }
     &__text {
       font-size: 1.6rem;
+      font-weight: 500;
     }
-    &__btn {
-      margin: 0 auto;
-      margin-top: 3rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    &__button {
+      padding: 1.25rem 0;
+      border: 3px solid $button-border;
+      background: $button-background;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 0.75rem;
+      width: 10.5rem;
+      display: flex;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0px 0px 5px $dark-mode-section;
+
+      &:active {
+        background: $button-border;
+      }
+      &:hover {
+        background: $button-border;
+      }
     }
   }
 }

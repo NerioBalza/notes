@@ -7,22 +7,21 @@
   }
 
   .input {
-    background-color: $light-color-2;
+    background-color: $light-mode-section;
     outline: none;
     font-size: 1.4rem;
     width: 100%;
     padding: 1rem 0.75rem;
     border-radius: 0.5rem;
-    border: 2px solid $dark-color;
-    margin-bottom: 1.25rem;
+    border: 2px solid $dark-mode-background;
 
     &::placeholder {
       font-size: 1.4rem;
-      color: $dark-color;
+      color: $dark-mode-background;
     }
   }
 }
 
 body.dark .input {
-  border-color: $light-color;
+  border-color: $light-mode-background;
 }
