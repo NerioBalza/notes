@@ -1,11 +1,12 @@
 import React from "react";
+import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, onApp }) => {
   return (
     <>
-      {" "}
-      {children} <Footer />
+      <Header /> {children}
+      {!onApp ? <Footer /> : null}
     </>
   );
 };

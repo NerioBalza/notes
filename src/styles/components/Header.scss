@@ -1,0 +1,163 @@
+.header {
+  height: 6.5rem;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $light-color-2;
+  position: relative;
+
+  &-title {
+    &__text {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+  }
+
+  .menu-open {
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 3rem;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  .menu-close {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 0.5rem;
+    font-size: 2rem;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .menu {
+    background: $light-color-2;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: -100vh;
+    left: 0;
+    padding: 2.5rem;
+    display: grid;
+    gap: 2.5rem;
+    align-content: start;
+    transition: 500ms;
+
+    @media screen and (min-width: 768px) {
+      position: static;
+      width: initial;
+      height: 6.5rem;
+      display: flex;
+      padding: 1rem 0;
+      align-items: center;
+      gap: 1rem;
+      transition: none;
+    }
+
+    hr {
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    &__navbar {
+      ul {
+        display: grid;
+        gap: 2rem;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+          display: flex;
+          gap: 1rem;
+        }
+        li {
+          list-style: none;
+          a {
+            display: inline-block;
+            font-size: 1.6rem;
+            padding: 0.5rem 2rem;
+            font-weight: bold;
+
+            @media screen and (min-width: 768px) {
+              padding: 0.5rem 0.75rem;
+            }
+          }
+        }
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .dark-mode {
+        display: flex;
+        width: 56px;
+        height: 28px;
+        border-radius: 14px;
+        background-color: $light-color;
+        position: relative;
+
+        &__button {
+          top: 0;
+          transition: 500ms;
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          margin: 2px;
+          border-radius: 13px;
+          left: 0;
+          background-color: $dark-color;
+        }
+        &__icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 28px;
+          font-size: 1.8rem;
+          height: 28px;
+        }
+      }
+    }
+    &__logout {
+      button {
+        border: none;
+        border-radius: 0.25rem;
+        padding: 0.5rem 2rem;
+        display: block;
+        margin: 0 auto;
+        font-family: $title-font;
+        font-size: 1.4rem;
+        font-weight: 500;
+        background: #e74c3c;
+      }
+    }
+  }
+
+  .menu-active {
+    top: 0;
+  }
+}
+
+body.dark .header {
+  background-color: $dark-color-2;
+
+  .menu {
+    background-color: $dark-color-2;
+
+    &__buttons {
+      .dark-mode {
+        background-color: $dark-color;
+        &__button {
+          background-color: $light-color;
+          left: 28px;
+        }
+      }
+    }
+  }
+}

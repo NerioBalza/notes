@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import SocialMedia from "./SocialMedia";
 import { logoutUser } from "../actions";
 
 const Header = ({ isLogin, logoutUser, history }) => {
@@ -10,6 +9,7 @@ const Header = ({ isLogin, logoutUser, history }) => {
   const darkModeKey = "notes-dark-mode";
 
   useEffect(() => {
+    handleCloseMenu();
     if (localStorage.getItem(darkModeKey) === null) {
       localStorage.setItem(darkModeKey, false);
       setDarkMode(false);
@@ -46,7 +46,7 @@ const Header = ({ isLogin, logoutUser, history }) => {
     document.body.classList.remove("limit-body-height");
   };
 
-  const logOut = () => {
+  const handleLogOut = () => {
     handleCloseMenu();
     logoutUser();
     history.push("/");
@@ -54,42 +54,39 @@ const Header = ({ isLogin, logoutUser, history }) => {
 
   return (
     <header className="header">
-      <Link to="/">
-        <h1 className="header__title">Notes</h1>
-      </Link>
+      <div className="header-title">
+        <h1 className="header-title__text">
+          <Link to="/">Notes</Link>
+        </h1>
+      </div>
 
-      <i className="icon-menu menu-btn" onClick={handleShowMenu}></i>
-
+      <i className="icon-menu menu-open" onClick={handleShowMenu}></i>
       <div className="menu" id="menu">
-        <div className="menu-buttons">
+        <div className="menu__buttons">
           <div className="dark-mode" id="dark-mode" onClick={handleDarkMode}>
             <div className="dark-mode__icon">🌜</div>
             <div className="dark-mode__icon">🌞</div>
             <div className="dark-mode__button"></div>
           </div>
-          <i
-            className="icon-cross close-menu-btn"
-            onClick={handleCloseMenu}
-          ></i>
+          <i className="icon-cross menu-close" onClick={handleCloseMenu}></i>
         </div>
-
         <hr />
-
-        <div className="menu-links">
+        <nav className="menu__navbar">
           <ul>
-            {userLogin ? (
-              <>
-                <li>
-                  <Link to="profile">Profile</Link>
-                </li>
-                <li>
-                  <p onClick={logOut}>Log out</p>
-                </li>
-              </>
-            ) : null}
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/">About</Link>
+            </li>
+            <li>
+              <Link to="/">GitHub</Link>
+            </li>
           </ul>
-
-          <SocialMedia />
+        </nav>
+        <hr />
+        <div className="menu__logout">
+          {userLogin ? <button onClick={handleLogOut}>Log out</button> : null}
         </div>
       </div>
     </header>
