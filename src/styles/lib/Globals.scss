@@ -21,6 +21,7 @@ $dark-mode-text: #eaecee;
 $note-color: #f9e7af;
 $button-background: #2ecc71;
 $button-border: #239b56;
+$danger-color: #e74c3c;
 
 * {
   margin: 0;
@@ -78,4 +79,7 @@ p {
 
 li {
   list-style: none;
+}
+
+.modal {
 }

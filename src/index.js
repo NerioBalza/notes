@@ -15,11 +15,6 @@ import App from "./app/App";
 import "./styles/styles.scss";
 
 const initialState = {
-  user: {
-    email: "",
-    name: "",
-    isLogin: false,
-  },
   notes: [],
 };
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -27,11 +22,11 @@ const store = createStore(reducer, initialState, composeEnhancers());
 
 ReactDOM.render(
   <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-    <Suspense fallback={"conectando..."}>
-      <Provider store={store}>
+    <Provider store={store}>
+      <Suspense fallback={"conectando..."}>
         <App />
-      </Provider>
-    </Suspense>
+      </Suspense>
+    </Provider>
   </FirebaseAppProvider>,
   document.getElementById("root")
 );

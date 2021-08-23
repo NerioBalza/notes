@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { connect } from "react-redux";
+import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { useUser } from "reactfire";
 
 // Route Pages
 import Home from "../pages/Home";
@@ -11,16 +11,13 @@ import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
 import NotFound from "../pages/NotFound";
 
-function App({ isLoging }) {
-  const [loging, setLogin] = useState(false);
-
-  useEffect(() => {
-    setLogin(isLoging);
-  }, [isLoging]);
+function App() {
+  const user = useUser();
+  const userData = user.data;
 
   return (
     <BrowserRouter>
-      {loging ? (
+      {userData ? (
         <Switch>
           <Route exact path="/" component={Notes} />
           <Route exact path="/note/new" component={NoteNew} />
@@ -41,10 +38,4 @@ function App({ isLoging }) {
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    isLoging: state.user.isLoging,
-  };
-};
-
-export default connect(mapStateToProps, null)(App);
+export default App;

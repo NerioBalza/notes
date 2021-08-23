@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logoutUser } from "../actions";
+import { useFirebaseApp, useUser } from "reactfire";
 
 const Header = ({ isLogin, logoutUser, history }) => {
   const [darkMode, setDarkMode] = useState(false);
-  const [userLogin, setUserLogin] = useState(false);
   const darkModeKey = "notes-dark-mode";
+  const firebase = useFirebaseApp();
+  const userData = useUser().data;
 
   useEffect(() => {
     handleCloseMenu();
@@ -19,10 +21,6 @@ const Header = ({ isLogin, logoutUser, history }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  useEffect(() => {
-    setUserLogin(isLogin);
-  }, [isLogin]);
 
   useEffect(() => {
     darkMode
@@ -48,8 +46,12 @@ const Header = ({ isLogin, logoutUser, history }) => {
 
   const handleLogOut = () => {
     handleCloseMenu();
-    logoutUser();
-    history.push("/");
+    firebase
+      .auth()
+      .signOut()
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -86,7 +88,7 @@ const Header = ({ isLogin, logoutUser, history }) => {
         </nav>
         <hr />
         <div className="menu__logout">
-          {userLogin ? <button onClick={handleLogOut}>Log out</button> : null}
+          {userData && <button onClick={handleLogOut}>Log out</button>}
         </div>
       </div>
     </header>
@@ -95,7 +97,7 @@ const Header = ({ isLogin, logoutUser, history }) => {
 
 const mapStateToProps = (state) => {
   return {
-    isLogin: state.user.isLogin,
+    isLogin: state.notes,
   };
 };
 
