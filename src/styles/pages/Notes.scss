@@ -1,5 +1,5 @@
 .notes {
-  height: auto;
+  padding: 5rem 2.5rem;
   min-height: calc(100vh - 6.5rem);
 
   &-var {
@@ -9,7 +9,6 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    padding: 0 2.5rem;
     justify-content: space-between;
     gap: 1rem;
 
@@ -30,7 +29,8 @@
 
     &__add {
       font-size: 1.8rem;
-      background-color: $light-mode-section;
+      background-color: $light-mode-text;
+      color: $light-mode-section;
       padding: 1.1rem;
       border-radius: 2rem;
     }

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-import Header from "../components/Header";
 import Note from "../components/Note";
+import Layout from "../components/Layout";
 
 const Notes = ({ notes, history }) => {
   const [notesData, setNotesData] = useState([]);
@@ -30,9 +30,8 @@ const Notes = ({ notes, history }) => {
   };
 
   return (
-    <>
-      <Header history={history} />
-      <div className="notes">
+    <Layout onApp={true}>
+      <main className="notes">
         <section className="notes-var">
           <input
             className="notes-var__searcher"
@@ -49,8 +48,8 @@ const Notes = ({ notes, history }) => {
             <Note data={element} key={element.note_id} />
           ))}
         </section>
-        <div className="notes-messages">
-          {!isSearching && notesData.length === 0 ? (
+        <section className="notes-messages">
+          {!isSearching && notesData.length === 0 && (
             <p className="message-text">
               Press{" "}
               <Link to="/note/new">
@@ -58,13 +57,13 @@ const Notes = ({ notes, history }) => {
               </Link>{" "}
               to create a note
             </p>
-          ) : null}
-          {isSearching && notesData.length === 0 ? (
+          )}
+          {isSearching && notesData.length === 0 && (
             <p className="message-text">No notes were found.</p>
-          ) : null}
-        </div>
-      </div>
-    </>
+          )}
+        </section>
+      </main>
+    </Layout>
   );
 };
 
