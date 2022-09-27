@@ -1,32 +1,40 @@
-import React, { Suspense } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-// Firebase
-import { FirebaseAppProvider } from "reactfire";
-import firebaseConfig from "./firebase-config";
+import App from "./App";
+import "./styles/index.scss";
 
-//Redux
-import { Provider } from "react-redux";
-import { createStore, compose } from "redux";
-import reducer from "./reducers";
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
+// import React, { Suspense } from "react";
+// import ReactDOM from "react-dom";
 
-//Component
-import App from "./app/App";
-import "./styles/styles.scss";
+// // Firebase
+// import { FirebaseAppProvider } from "reactfire";
+// import firebaseConfig from "./firebase-config";
 
-const initialState = {
-  notes: [],
-};
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducer, initialState, composeEnhancers());
+// //Redux
+// import { Provider } from "react-redux";
+// import { createStore, compose } from "redux";
+// import reducer from "./reducers";
 
-ReactDOM.render(
-  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-    <Provider store={store}>
-      <Suspense fallback={"conectando..."}>
-        <App />
-      </Suspense>
-    </Provider>
-  </FirebaseAppProvider>,
-  document.getElementById("root")
-);
+// //Component
+// import App from "./app/App";
+// import "./styles/styles.scss";
+
+// const initialState = {
+//   notes: [],
+// };
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// const store = createStore(reducer, initialState, composeEnhancers());
+
+// ReactDOM.render(
+//   <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+//     <Provider store={store}>
+//       <Suspense fallback={"conectando..."}>
+//         <App />
+//       </Suspense>
+//     </Provider>
+//   </FirebaseAppProvider>,
+//   document.getElementById("root")
+// );

@@ -2,11 +2,12 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ children, onApp }) => {
+const Layout = ({ children }) => {
   return (
     <>
-      <Header /> {children}
-      {!onApp ? <Footer /> : null}
+      <Header />
+      {children}
+      <Footer />
     </>
   );
 };

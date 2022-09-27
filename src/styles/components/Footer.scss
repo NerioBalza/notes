@@ -1,53 +1,57 @@
 .footer {
-  background-color: $light-mode-section;
-  padding: 5rem 2.5rem;
-  display: grid;
-  gap: 3rem;
-  text-align: center;
-  font-size: 1.4rem;
-  box-shadow: 0px 0px 5px $dark-mode-section;
-
-  .social-media {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 500px;
-
-    &__icon {
-      padding: 1.5rem;
-      font-size: 2rem;
-      display: inline-block;
-      border: 2px solid $dark-mode-background;
-      border-radius: 50%;
-
-      &:active {
-        background-color: $dark-mode-section;
-        color: $light-mode-section;
-      }
-      &:hover {
-        background-color: $dark-mode-background;
-        color: $light-mode-section;
-      }
-    }
-  }
+  height: 50vh;
 }
 
-body.dark .footer {
-  background-color: $dark-mode-section;
+// .footer {
+//   background-color: $light-mode-section;
+//   padding: 5rem 2.5rem;
+//   display: grid;
+//   gap: 3rem;
+//   text-align: center;
+//   font-size: 1.4rem;
+//   box-shadow: 0px 0px 5px $dark-mode-section;
 
-  .social-media {
-    &__icon {
-      border-color: $light-mode-background;
+//   .social-media {
+//     display: flex;
+//     justify-content: space-evenly;
+//     margin: 0 auto;
+//     width: 100%;
+//     max-width: 500px;
 
-      &:active {
-        background-color: $light-mode-background;
-        color: $dark-mode-section;
-      }
-      &:hover {
-        background-color: $light-mode-background;
-        color: $dark-mode-section;
-      }
-    }
-  }
-}
+//     &__icon {
+//       padding: 1.5rem;
+//       font-size: 2rem;
+//       display: inline-block;
+//       border: 2px solid $dark-mode-background;
+//       border-radius: 50%;
+
+//       &:active {
+//         background-color: $dark-mode-section;
+//         color: $light-mode-section;
+//       }
+//       &:hover {
+//         background-color: $dark-mode-background;
+//         color: $light-mode-section;
+//       }
+//     }
+//   }
+// }
+
+// body.dark .footer {
+//   background-color: $dark-mode-section;
+
+//   .social-media {
+//     &__icon {
+//       border-color: $light-mode-background;
+
+//       &:active {
+//         background-color: $light-mode-background;
+//         color: $dark-mode-section;
+//       }
+//       &:hover {
+//         background-color: $light-mode-background;
+//         color: $dark-mode-section;
+//       }
+//     }
+//   }
+// }

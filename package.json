@@ -1,22 +1,20 @@
 {
-  "name": "notes",
+  "name": "notes-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^12.1.2",
+    "@reduxjs/toolkit": "^1.8.2",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
-    "firebase": "^9.6.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.4",
-    "react-router-dom": "^6.2.1",
-    "redux": "^4.1.0",
-    "sass": "^1.38.0",
+    "firebase": "^9.8.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.0",
+    "redux": "^4.2.0",
+    "sass": "^1.52.2",
     "uuid": "^8.3.2"
-  },
-  "devDependencies": {
-    "react-scripts": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

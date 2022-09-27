@@ -18,10 +18,18 @@ $dark-mode-section: #17202a;
 $dark-mode-text: #eaecee;
 
 // // Others
+$title-color: #2ecc71;
 $note-color: #f9e7af;
 $button-background: #2ecc71;
 $button-border: #239b56;
 $danger-color: #e74c3c;
+
+// New Color Pallete.
+$primary-color: #00a388;
+$secondary-color: #79bd8f;
+$titles-color: #beeb9f;
+$notes-color: #ffff9d;
+$texts-color: #0f0f1c;
 
 * {
   margin: 0;
@@ -34,10 +42,9 @@ html {
 }
 
 body {
-  background: $light-mode-background;
-  color: $light-mode-text;
+  background: $secondary-color;
+  color: $texts-color;
   font-family: $text-font;
-  min-width: 320px;
 }
 
 .dark {
@@ -57,11 +64,7 @@ h4,
 h5,
 h6 {
   font-family: $title-font;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  // color: $title-color;
 }
 
 hr {
@@ -69,17 +72,15 @@ hr {
   border-bottom: none;
 }
 
-button {
+p,
+button,
+a {
+  color: inherit;
   font-family: inherit;
-}
-
-p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  text-decoration: none;
 }
 
 li {
   list-style: none;
-}
-
-.modal {
 }
